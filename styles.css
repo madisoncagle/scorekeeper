@@ -9,7 +9,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
-    outline: 1px solid salmon;
+    /* outline: 1px solid salmon; */
 }
 
 /* GLOBAL */
@@ -52,18 +52,52 @@ footer {
 }
 
 .score {
-    font-size: 3rem;
+    font-size: 4.5rem;
 }
 
 .card {
-    width: 12rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 10rem;
     word-wrap: break-word;
     padding: 1rem;
+    border-radius: 1rem;
+    color: #fff;
+    background-color: #000;
 }
 
 .buttons {
     display: flex;
     justify-content: space-between;
     gap: 1rem;
-    padding: 0.5rem;
+    font-size: 2rem;
+}
+
+.buttons .no {
+    color: #f00;
+    background-color: transparent;
+    border: 1px solid #f00;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.buttons .yes {
+    color: #0f0;
+    background-color: transparent;
+    border: 1px solid #0f0;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.buttons .no:hover {
+    color: #000;
+    background-color: #f00;
+}
+
+.buttons .yes:hover {
+    color: #000;
+    background-color: #0f0;
 }
