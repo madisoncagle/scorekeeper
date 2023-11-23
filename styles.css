@@ -59,7 +59,7 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    width: 10rem;
+    width: 12rem;
     word-wrap: break-word;
     padding: 1rem;
     border-radius: 1rem;
@@ -70,8 +70,10 @@ footer {
 .buttons {
     display: flex;
     justify-content: space-between;
-    gap: 1rem;
-    font-size: 2rem;
+}
+
+.buttons button {
+    font-size: 1rem;
 }
 
 .buttons .no {
