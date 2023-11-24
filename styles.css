@@ -59,6 +59,17 @@ button:hover {
     margin: 0 auto;
 }
 
+.container h2 {
+    margin-bottom: 2rem;
+}
+
+.scoreboard {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
 .numeric {
     font-family: "Clock", sans-serif;
 }
