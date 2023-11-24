@@ -190,6 +190,9 @@ button {
 /* IDS */
 
 #add-player-btn {
+    color: #000;
+    background-color: transparent;
+    border: 1px solid #000;
     margin: 0.5rem 0 1rem;
 }
 
