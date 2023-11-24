@@ -90,6 +90,10 @@ button:hover {
     background-color: #000;
 }
 
+.player-name {
+    font-size: 1.75rem;
+}
+
 .buttons {
     display: flex;
     justify-content: space-between;
@@ -131,4 +135,8 @@ button:hover {
 
 .bid-button:hover {
     background-color: #fff;
+}
+
+.bid-number {
+    width: 2rem;
 }
