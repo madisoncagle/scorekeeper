@@ -88,6 +88,10 @@ button:hover {
     border-radius: 1rem;
     color: #fff;
     background-color: #000;
+    box-shadow: 0.3px 0.5px 0.9px hsl(0deg 0% 63% / 0),
+    1.7px 2.3px 4.3px hsl(0deg 0% 63% / 0.18),
+    3.3px 4.7px 8.6px hsl(0deg 0% 63% / 0.36),
+    6.8px 9.6px 17.6px hsl(0deg 0% 63% / 0.54);
 }
 
 .player-name {
