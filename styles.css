@@ -9,7 +9,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
-    outline: 1px solid salmon;
+    /* outline: 1px solid salmon; */
 }
 
 /* GLOBAL */
@@ -151,18 +151,31 @@ button {
     background-color: rgba(0, 0, 0, 0.4);
 }
 
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .modal-content {
     background-color: #fff;
     margin: auto;
     padding: 1rem;
     border: 1px solid #888;
-    width: 50%;
+    width: 30%;
 }
 
-/* The Close Button */
+.modal-content button:hover {
+    color: #fff;
+    background-color: #000;
+}
+
+.modal-name-input {
+    margin: 1rem auto;
+}
+
 .close {
     color: #aaaaaa;
-    float: right;
     font-size: 2rem;
     font-weight: bold;
 }
