@@ -9,7 +9,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
-    /* outline: 1px solid salmon; */
+    outline: 1px solid salmon;
 }
 
 /* GLOBAL */
@@ -48,19 +48,11 @@ button {
     transition: all 0.3s;
 }
 
-button:hover {
-    color: #000 !important;
-}
-
 /* CLASSES */
 
 .container {
     max-width: 1450px;
     margin: 0 auto;
-}
-
-.container h2 {
-    margin-bottom: 2rem;
 }
 
 .scoreboard {
@@ -111,10 +103,12 @@ button:hover {
 }
 
 .buttons .no:hover {
+    color: #000;
     background-color: #f00;
 }
 
 .buttons .yes:hover {
+    color: #000;
     background-color: #0f0;
 }
 
@@ -135,9 +129,58 @@ button:hover {
 }
 
 .bid-button:hover {
+    color: #000;
     background-color: #fff;
 }
 
 .bid-number {
     width: 2rem;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 7rem;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: auto;
+    padding: 1rem;
+    border: 1px solid #888;
+    width: 50%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* IDS */
+
+#add-player-btn {
+    margin: 0.5rem 0 1rem;
+}
+
+#add-player-btn:hover {
+    color: #fff;
+    background-color: #000;
 }
