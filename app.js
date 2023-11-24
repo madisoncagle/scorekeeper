@@ -1,48 +1,51 @@
-let playerCard = document.getElementById("madison");
+let playerCards = document.querySelectorAll(".card");
 
-// bid control
-const minus = playerCard.querySelector(".minus");
-const plus = playerCard.querySelector(".plus");
+// add event listeners for each player card
+for (let card of playerCards) {
+    // bid control
+    const minus = card.querySelector(".minus");
+    const plus = card.querySelector(".plus");
+    
+    minus.addEventListener("click", () => {
+        let bid = parseInt(card.querySelector(".bid-number").textContent);
 
-minus.addEventListener("click", () => {
-    let bid = parseInt(playerCard.querySelector(".bid-number").textContent);
+        console.log(bid);
 
-    console.log(bid);
+        if (bid > 0) {
+            bid -= 1;
+        }
 
-    if (bid > 0) {
-        bid -= 1;
-    }
+        card.querySelector(".bid-number").textContent = bid;
+    });
 
-    playerCard.querySelector(".bid-number").textContent = bid;
-});
+    plus.addEventListener("click", () => {
+        let bid = parseInt(card.querySelector(".bid-number").textContent);
 
-plus.addEventListener("click", () => {
-    let bid = parseInt(playerCard.querySelector(".bid-number").textContent);
+        bid += 1;
 
-    bid += 1;
+        card.querySelector(".bid-number").textContent = bid;
 
-    playerCard.querySelector(".bid-number").textContent = bid;
+        console.log(bid);
+    });
 
-    console.log(bid);
-});
+    // score control
+    const no = card.querySelector(".no");
+    const yes = card.querySelector(".yes");
 
-// score control
-const no = playerCard.querySelector(".no");
-const yes = playerCard.querySelector(".yes");
+    no.addEventListener("click", () => {
+        // reset bid number
+        card.querySelector(".bid-number").textContent = 0;
+    });
 
-no.addEventListener("click", () => {
-    // reset bid number
-    playerCard.querySelector(".bid-number").textContent = 0;
-});
+    yes.addEventListener("click", () => {
+        // add to score
+        let bid = parseInt(card.querySelector(".bid-number").textContent);
+        let score = parseInt(card.querySelector(".score").textContent);
+        score += (10 + bid);
 
-yes.addEventListener("click", () => {
-    // add to score
-    let bid = parseInt(playerCard.querySelector(".bid-number").textContent);
-    let score = parseInt(playerCard.querySelector(".score").textContent);
-    score += (10 + bid);
+        card.querySelector(".score").textContent = score;
 
-    playerCard.querySelector(".score").textContent = score;
-
-    // reset bid number
-    playerCard.querySelector(".bid-number").textContent = 0;
-});
+        // reset bid number
+        card.querySelector(".bid-number").textContent = 0;
+    });
+}
