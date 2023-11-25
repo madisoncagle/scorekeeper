@@ -169,6 +169,7 @@ button {
     margin: 1rem auto 0;
     color: #000;
     background-color: transparent;
+    border: 1px solid #000;
 }
 
 .modal-content button:hover {
