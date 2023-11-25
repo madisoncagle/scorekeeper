@@ -165,13 +165,27 @@ button {
     width: 30%;
 }
 
+.modal-content button {
+    margin: 1rem auto 0;
+    color: #000;
+    background-color: transparent;
+}
+
 .modal-content button:hover {
     color: #fff;
     background-color: #000;
 }
 
 .modal-name-input {
-    margin: 1rem auto;
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem auto 0;
+}
+
+.modal-warning {
+    font-size: 0.8rem;
+    color: #f00;
+    display: none;
 }
 
 .close {

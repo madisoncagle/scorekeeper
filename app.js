@@ -51,25 +51,49 @@ for (let card of playerCards) {
 }
 
 // modal control
-let modal = document.getElementById("add-player-modal");
-let btn = document.getElementById("add-player-btn");
-let x = document.getElementsByClassName("close")[0];
-let submit = document.getElementById("submit-player-name");
+const modal = document.getElementById("add-player-modal");
+const addPlayerBtn = document.getElementById("add-player-btn");
+const x = document.getElementsByClassName("close")[0];
+const submit = document.getElementById("submit-player-name");
+const newPlayerName = document.getElementById("new-name");
+const warning = document.getElementsByClassName("modal-warning")[0];
+const nameInput = document.getElementById("new-name");
 
 submit.addEventListener("click", () => {
     // get name from input
+    console.log(newPlayerName.value);
+
+    if (newPlayerName.value == "") {
+        warning.style.display = "block";
+        console.log("no player name");
+    }
+
+    newPlayerName.value = "";
 });
 
-btn.addEventListener("click", () => {
+addPlayerBtn.addEventListener("click", () => {
     modal.style.display = "block";
 });
 
 x.addEventListener("click", () => {
     modal.style.display = "none";
+    warning.style.display = "none";
+    newPlayerName.value = "";
+});
+
+nameInput.addEventListener("keyup", () => {
+    if (newPlayerName.value == "") {
+        warning.style.display = "block";
+    }
+    else {
+        warning.style.display = "none";
+    }
 });
 
 window.addEventListener("click", (event) => {
     if (event.target == modal) {
         modal.style.display = "none";
+        warning.style.display = "none";
+        newPlayerName.value = "";
     }
 });
