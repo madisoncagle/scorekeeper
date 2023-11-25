@@ -76,7 +76,7 @@ submit.addEventListener("click", () => {
 
     // else add player to scoreboard
     const scoreboard = document.getElementsByClassName("scoreboard")[0];
-    scoreboard.innerHTML += generateCardHTML(newPlayerName.value);
+    scoreboard.insertAdjacentHTML("beforeend", generateCardHTML(newPlayerName.value));
 
     // add event listeners for buttons
     addListeners(newPlayerName.value)
