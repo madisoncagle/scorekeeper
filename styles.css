@@ -235,3 +235,9 @@ button {
         width: 250px;
     }
 }
+
+@media screen and (max-width: 1450px) {
+    .container {
+        padding: 0 24px;
+    }
+}
