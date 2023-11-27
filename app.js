@@ -64,30 +64,12 @@ const warning = document.getElementsByClassName("modal-warning")[0];
 const nameInput = document.getElementById("new-name");
 
 submit.addEventListener("click", () => {
-    // get name from input
-    console.log(newPlayerName.value);
-
-    // if empty, warn
-    if (newPlayerName.value == "") {
-        warning.style.display = "block";
-        console.log("no player name");
-        return;
-    }
-
-    // else add player to scoreboard
-    const scoreboard = document.getElementsByClassName("scoreboard")[0];
-    scoreboard.insertAdjacentHTML("beforeend", generateCardHTML(newPlayerName.value));
-
-    // add event listeners for buttons
-    addListeners(newPlayerName.value)
-
-    // clear input and close
-    newPlayerName.value = "";
-    modal.style.display = "none";
+    addPlayer()
 });
 
 addPlayerBtn.addEventListener("click", () => {
     modal.style.display = "block";
+    nameInput.focus()
 });
 
 x.addEventListener("click", () => {
@@ -96,9 +78,12 @@ x.addEventListener("click", () => {
     newPlayerName.value = "";
 });
 
-nameInput.addEventListener("keyup", () => {
-    if (newPlayerName.value == "") {
+nameInput.addEventListener("keyup", (event) => {
+    if (event.key == "Enter" && newPlayerName.value == "") {
         warning.style.display = "block";
+    }
+    else if (event.key == "Enter") {
+        addPlayer()
     }
     else {
         warning.style.display = "none";
@@ -203,6 +188,29 @@ function addListeners(playerName) {
 
         console.log("yes clicked");
     });
+}
+
+function addPlayer() {
+    // get name from input
+    console.log(newPlayerName.value);
+
+    // if empty, warn
+    if (newPlayerName.value == "") {
+        warning.style.display = "block";
+        console.log("no player name");
+        return;
+    }
+
+    // else add player to scoreboard
+    const scoreboard = document.getElementsByClassName("scoreboard")[0];
+    scoreboard.insertAdjacentHTML("beforeend", generateCardHTML(newPlayerName.value));
+
+    // add event listeners for buttons
+    addListeners(newPlayerName.value)
+
+    // clear input and close
+    newPlayerName.value = "";
+    modal.style.display = "none";
 }
 
 //#endregion

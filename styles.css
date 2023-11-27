@@ -24,6 +24,8 @@ body {
 header,
 footer {
     padding: 1rem 0;
+    background-color: #000;
+    color: #fff;
 }
 
 header {
@@ -33,6 +35,8 @@ header {
 main {
     flex: 1 1 auto;
     text-align: center;
+    overflow: scroll;
+    overflow-x: hidden;
 }
 
 footer {
@@ -46,6 +50,7 @@ button {
     border-radius: 1rem;
     background-color: transparent;
     transition: all 0.3s;
+    font-weight: 600;
 }
 
 /* CLASSES */
@@ -55,15 +60,20 @@ button {
     margin: 0 auto;
 }
 
+.container h2 {
+    padding: 1rem;
+}
+
 .scoreboard {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
     justify-content: center;
+    padding: 1rem;
 }
 
 .numeric {
-    font-family: "Clock", sans-serif;
+    font-family: "Clock", "Poppins", sans-serif;
 }
 
 .score {
@@ -94,12 +104,12 @@ button {
 
 .buttons .no {
     color: #f00;
-    border: 1px solid #f00;
+    border: 3px solid #f00;
 }
 
 .buttons .yes {
     color: #0f0;
-    border: 1px solid #0f0;
+    border: 3px solid #0f0;
 }
 
 .buttons .no:hover {
@@ -124,7 +134,7 @@ button {
     justify-content: center;
     height: 1.25rem;
     color: #fff;
-    border: 1px solid #fff;
+    border: 3px solid #fff;
     margin: auto;
 }
 
@@ -160,9 +170,10 @@ button {
 .modal-content {
     background-color: #fff;
     margin: auto;
-    padding: 1rem;
+    padding: 1rem 1.5rem 1.5rem;
     border: 1px solid #888;
-    width: 30%;
+    border-radius: 24px;
+    width: 400px;
 }
 
 .modal-content button {
@@ -178,8 +189,6 @@ button {
 }
 
 .modal-name-input {
-    display: flex;
-    justify-content: space-between;
     margin: 1rem auto 0;
 }
 
@@ -207,11 +216,22 @@ button {
 #add-player-btn {
     color: #000;
     background-color: transparent;
-    border: 1px solid #000;
-    margin: 0.5rem 0 1rem;
+    border: 3px solid #000;
 }
 
 #add-player-btn:hover {
     color: #fff;
     background-color: #000;
+}
+
+#submit-player-name {
+    border: 3px solid #000;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 450px) {
+    .modal-content {
+        width: 250px;
+    }
 }
