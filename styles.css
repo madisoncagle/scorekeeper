@@ -63,7 +63,8 @@ footer .container {
     align-items: center;
 }
 
-footer i {
+footer a {
+    display: flex;
     font-size: 1.25rem;
 }
 
