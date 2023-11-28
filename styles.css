@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 @font-face {
-    font-family: "Clock";
+    font-family: "Digital";
     src: url("./resources/digital-7.mono.ttf");
 }
 
@@ -58,6 +58,18 @@ a {
     transition: all 0.2s;
 }
 
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .container nav {
+    display: flex;
+    justify-content: end;
+    gap: 4rem;
+}
+
 footer .container {
     display: flex;
     justify-content: space-between;
@@ -89,6 +101,28 @@ a:hover {
     padding: 1rem;
 }
 
+.nav-section {
+    color: #fff;
+    border: none;
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    transition: all 0.2s;
+}
+
+.nav-section:hover {
+    color: #0f0;
+}
+
+.nav-section.active::after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 70%;
+    background-color: #0f0;
+}
+
 .scoreboard {
     display: flex;
     flex-wrap: wrap;
@@ -98,7 +132,7 @@ a:hover {
 }
 
 .numeric {
-    font-family: "Clock", "Poppins", sans-serif;
+    font-family: "Digital", "Poppins", sans-serif;
 }
 
 .score {
