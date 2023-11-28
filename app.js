@@ -202,8 +202,8 @@ function addPlayer() {
     }
 
     // else add player to scoreboard
-    const scoreboard = document.getElementsByClassName("scoreboard")[0];
-    scoreboard.insertAdjacentHTML("beforeend", generateCardHTML(newPlayerName.value));
+    const addPlayerBtn = document.getElementById("add-player-btn");
+    addPlayerBtn.insertAdjacentHTML("beforebegin", generateCardHTML(newPlayerName.value));
 
     // add event listeners for buttons
     addListeners(newPlayerName.value)

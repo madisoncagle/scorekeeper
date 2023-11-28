@@ -98,12 +98,13 @@ a:hover {
 }
 
 .container h2 {
-    padding: 1rem;
+    padding: 0.5rem;
 }
 
 .nav-section {
     color: #fff;
     border: none;
+    border-radius: 0;
     font-size: 1rem;
     font-weight: 500;
     margin: 0;
@@ -126,9 +127,10 @@ a:hover {
 .scoreboard {
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem;
     justify-content: center;
-    padding: 1rem;
+    align-items: center;
+    gap: 2rem;
+    padding: 0 0 1rem 0;
 }
 
 .numeric {
@@ -273,9 +275,25 @@ a:hover {
 /* IDS */
 
 #add-player-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* gap: 0.2rem; */
     color: #000;
     background-color: transparent;
-    border: 3px solid #000;
+    border: 5px solid #000;
+    border-radius: 50%;
+    height: 5rem;
+    width: 5rem;
+}
+
+#add-player-btn .fa-user {
+    font-size: 2rem;
+    margin-left: 0.3rem;
+}
+
+#add-player-btn .fa-plus {
+    font-size: 1rem;
 }
 
 #add-player-btn:hover {
